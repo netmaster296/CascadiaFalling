@@ -25,15 +25,18 @@ flanks. Every BDF site is a PALA objective.
 
 **Easiest:** in the [Nuclear Option Mod Manager](https://github.com/Combat787/NuclearOptionModManager)
 search for "Cascadia Falling" and install it; it pulls in NOCustomMaps and NOGridLetters and installs the map
-(about 1.7 GB). Then subscribe to the Cascadia Falling mission on the Steam Workshop; it appears in the game's
-mission list under Workshop and updates itself.
+(about 1.7 GB). Then subscribe to the
+[Cascadia Falling mission on the Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3825716792);
+it appears in the game's mission list under Workshop and updates itself. (The mod manager listing is awaiting
+review; until it appears, install NOCustomMaps from the manager and the map by hand as below.)
 
 **By hand:**
 
 1. Download `cascadia-0.1.0.zip` from the [latest release](https://github.com/netmaster296/CascadiaFalling/releases)
    and put `cascadia-0.1.0.nomapz` into `BepInEx\plugins\NOCustomMaps\maps\` in your game folder
    (`CustomMaps\` under `%USERPROFILE%\AppData\LocalLow\Shockfront\NuclearOption\` works too).
-2. Copy this repository's `Missions\Cascadia Falling` folder to
+2. Subscribe to the [Workshop mission](https://steamcommunity.com/sharedfiles/filedetails/?id=3825716792), or
+   copy this repository's `Missions\Cascadia Falling` folder to
    `%USERPROFILE%\AppData\LocalLow\Shockfront\NuclearOption\Missions\`.
 3. Optional: `NOGridLetters.dll` from its [release](https://github.com/netmaster296/NOGridLetters/releases) into
    `BepInEx\plugins\`.
