@@ -4,8 +4,9 @@ A custom map and mission for [Nuclear Option](https://store.steampowered.com/app
 work in progress.
 
 **Map:** a 400 km box of the Pacific Northwest, Vancouver to Yakima, built from real elevation, land cover
-and OpenStreetMap data: nine airfields, four FOBs, seven helipads, three naval bases and four nuclear silo
-fields. Loads through BatongMaster's [NOCustomMaps](https://github.com/BatongMaster/NOCustomMaps) plugin.
+and OpenStreetMap data: sixteen airfields laid out as they really are, seventeen FOBs, seven helipads, three
+naval bases, eight mountain radar sites and four nuclear silo fields. Loads through BatongMaster's
+[NOCustomMaps](https://github.com/BatongMaster/NOCustomMaps) plugin.
 
 **Mission:** PALA attacks Puget Sound from the Pacific and the Strait of Georgia; BDF defends from Tacoma.
 PvP, both sides can be joined. Two PALA carrier groups are at sea from the start, one entering the Strait of
@@ -16,8 +17,8 @@ flanks. Every BDF site is a PALA objective.
 ## Prerequisites
 
 1. **BepInEx 5** (the Nuclear Option Mod Manager installs it for you).
-2. **NOCustomMaps 1.4.0 or newer.**
-3. **The Cascadia map**, build key `cm.cascadia.2546c698`. The host and every player need the same build.
+2. **NOCustomMaps 1.4.2 or newer** (the 1.4.0 build stopped working with the 2026-10-30 game update, 0.34.6).
+3. **The Cascadia map**, build key `cm.cascadia.d7766d89`. The host and every player need the same build.
 4. Optional: **[NOGridLetters](https://github.com/netmaster296/NOGridLetters)**, which makes the grid readable
    on a map with 40 rows (rows past Z read A*, B*..., zoomed-in columns read 12-3).
 
@@ -25,15 +26,14 @@ flanks. Every BDF site is a PALA objective.
 
 **Easiest:** in the [Nuclear Option Mod Manager](https://github.com/Combat787/NuclearOptionModManager)
 search for "Cascadia Falling" and install it; it pulls in NOCustomMaps and NOGridLetters and installs the map
-(about 1.7 GB). Then subscribe to the
+(about 1.6 GB). Then subscribe to the
 [Cascadia Falling mission on the Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3825716792);
-it appears in the game's mission list under Workshop and updates itself. (The mod manager listing is awaiting
-review; until it appears, install NOCustomMaps from the manager and the map by hand as below.)
+it appears in the game's mission list under Workshop and updates itself.
 
 **By hand:**
 
-1. Download `cascadia-0.1.0.zip` from the [latest release](https://github.com/netmaster296/CascadiaFalling/releases)
-   and put `cascadia-0.1.0.nomapz` into `BepInEx\plugins\NOCustomMaps\maps\` in your game folder
+1. Download `cascadia-0.1.1.zip` from the [latest release](https://github.com/netmaster296/CascadiaFalling/releases)
+   and put `cascadia-0.1.1.nomapz` into `BepInEx\plugins\NOCustomMaps\maps\` in your game folder
    (`CustomMaps\` under `%USERPROFILE%\AppData\LocalLow\Shockfront\NuclearOption\` works too).
 2. Subscribe to the [Workshop mission](https://steamcommunity.com/sharedfiles/filedetails/?id=3825716792), or
    copy this repository's `Missions\Cascadia Falling` folder to
@@ -44,7 +44,8 @@ review; until it appears, install NOCustomMaps from the manager and the map by h
 
 The `.nomapz` is the map bundle compressed in NOCustomMaps' own packed form; the plugin reads it directly and
 the map key is unchanged. Delete any earlier Cascadia build you may have (`cm.cascadia.982e4baa`, `ad4b5110`,
-`bbcd790f`, `12f4e54d`): the game cannot tell them apart by name.
+`bbcd790f`, `12f4e54d`, `2546c698`): the game cannot tell them apart by name. Keep only `cascadia-0.1.1.nomapz`
+(`cm.cascadia.d7766d89`).
 
 ## What is here
 

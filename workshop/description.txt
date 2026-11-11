@@ -1,8 +1,8 @@
 [h1]Prerequisites: install these first, or the mission will not load[/h1]
 [list]
 [*] [b]BepInEx 5[/b] (the Nuclear Option Mod Manager installs it for you).
-[*] [b]NOCustomMaps 1.4.0 or newer[/b] (BatongMaster's custom map loader).
-[*] [b]The Cascadia map, build cm.cascadia.2546c698[/b]: in the Nuclear Option Mod Manager search for "Cascadia Falling" and install it (it pulls NOCustomMaps in). Without the manager, download cascadia-0.1.0.zip from [url=https://github.com/netmaster296/CascadiaFalling/releases]github.com/netmaster296/CascadiaFalling/releases[/url] and put cascadia-0.1.0.nomapz into BepInEx\plugins\NOCustomMaps\maps\ in your game folder. About 1.7 GB.
+[*] [b]NOCustomMaps 1.4.2 or newer[/b] (BatongMaster's custom map loader; the 1.4.0 build stopped working with the 2026-10-30 game update, so get 1.4.2).
+[*] [b]The Cascadia map, build cm.cascadia.d7766d89[/b]: in the Nuclear Option Mod Manager search for "Cascadia Falling" and install it (it pulls NOCustomMaps in). Without the manager, download cascadia-0.1.1.zip from [url=https://github.com/netmaster296/CascadiaFalling/releases]github.com/netmaster296/CascadiaFalling/releases[/url] and put cascadia-0.1.1.nomapz into BepInEx\plugins\NOCustomMaps\maps\ in your game folder. About 1.6 GB.
 [*] [b]Optional: NOGridLetters[/b] (grid rows past Z read A*, B*... and zoomed-in columns read 12-3; without it the game shows punctuation and lower-case letters). In the mod manager, or the DLL from [url=https://github.com/netmaster296/NOGridLetters/releases]github.com/netmaster296/NOGridLetters/releases[/url] into BepInEx\plugins\.
 [*] [b]Multiplayer:[/b] the host and every player need the same map build. If a map update changes the build key, this page says so and everyone updates the map together.
 [/list]
@@ -10,13 +10,15 @@
 [h1]Cascadia Falling[/h1]
 PALA attacks Puget Sound from the Pacific and the Strait of Georgia; BDF defends from Tacoma. PvP: both sides can be joined.
 
-A 400 km map of the Pacific Northwest, Vancouver to Yakima, built from real elevation, land cover and OpenStreetMap data: nine airfields, four FOBs, seven helipads, three naval bases and four nuclear silo fields.
+A 400 km map of the Pacific Northwest, Vancouver to Yakima, built from real elevation, land cover and OpenStreetMap data: sixteen airfields laid out as they really are (runways, taxiways and stands at their real coordinates), seventeen FOBs, seven helipads, three naval bases, eight mountain radar sites and four nuclear silo fields.
 
 [b]BDF[/b] starts with nearly everything, two Hyperion carriers at three naval bases and pickets across the Sound.
 
-[b]PALA[/b] holds CFB Comox and has two carrier groups at sea from T+0, each a Hyperion, two Argus, two Dynamo, four corvettes and an Annex: one entering the Strait of Juan de Fuca from the Pacific (grid P8), one at the top of the Strait of Georgia (grid E12) coming south through Rosario Strait. They meet off Port Townsend, then push through Admiralty Inlet and down the Sound in line astern, the western force to Commencement Bay off Tacoma and the northern to Elliott Bay off Seattle. A new group enters on each axis every ten minutes until T+120, and the carriers launch AI aircraft all mission. Then come high-altitude Alkyon anti-ship strikes and Darkreach packages, landing craft at Port Angeles and Birch Bay, the I-5 and mountain columns, Tarantula lifts dropping AA onto the pads with Brawler and Revoker cover, and from T+95 nuclear strike packages on the silo fields. Everything PALA captures builds for PALA.
+[b]PALA[/b] holds CFB Comox and has two carrier groups at sea from T+0, each a Hyperion with two Dynamos, patrol boats and landing craft: one entering the Strait of Juan de Fuca from the Pacific (grid P8), one at the top of the Strait of Georgia (grid E12) coming south through Rosario Strait. They meet off Port Townsend, then push through Admiralty Inlet and down the Sound in line astern, the western force to Commencement Bay off Tacoma and the northern to Elliott Bay off Seattle. Reinforcement groups enter on each axis every ten minutes until T+120, and the carriers launch AI aircraft all mission. Then come high-altitude Alkyon anti-ship strikes and Darkreach packages, landing craft at Port Angeles and Birch Bay, the I-5 and mountain columns, Tarantula lifts dropping AA onto the pads with Brawler and Revoker cover, and from T+95 nuclear strike packages on the silo fields. Everything PALA captures builds for PALA.
 
-[b]Objectives:[/b] PALA wins by taking JBLM, Fort Lewis FOB, the Port of Tacoma and the Narrows; every other BDF airfield, FOB, pad and naval base is a PALA objective on the way, and each silo field is one to put out of action. BDF wins by sinking all six assault carriers or holding Tacoma until relief. Strategic release comes at T+90 and arms the silo launchers.
+[b]As the war unfolds the mission broadcasts intelligence reports[/b] - long-range radar plots, picket contact reports, coast watch and ground liaison - naming what each side's sensors are picking up and where it is headed.
+
+[b]Objectives:[/b] PALA wins by taking JBLM, Fort Lewis FOB, the Port of Tacoma and the Narrows; every other BDF airfield, FOB, pad and naval base is a PALA objective on the way, and each silo field is one to put out of action. BDF wins by sinking all five PALA Hyperions and then destroying the PALA Strategic HQ, which comes ashore once the carriers go down; or by holding the four key sites until relief at T+450. Strategic release comes at T+90 and arms the silo launchers.
 
 [b]Grid callouts:[/b] 10 km cells, A0 at the north-west corner. With NOGridLetters a callout is row + minor row + column, e.g. "D*f12-3".
 
