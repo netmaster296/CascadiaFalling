@@ -1,3 +1,5 @@
+Needs NOCustomMaps 1.4.2+ and the Cascadia map build cm.cascadia.d7766d89 (Mod Manager: install "Cascadia Falling"). Hosts with Wing Command: set AiSharpTurns = false. Mission 0.1.2. Full details below.
+
 [h1]Prerequisites: install these first, or the mission will not load[/h1]
 [list]
 [*] [b]BepInEx 5[/b] (the Nuclear Option Mod Manager installs it for you).
