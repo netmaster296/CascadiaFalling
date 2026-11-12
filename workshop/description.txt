@@ -3,22 +3,45 @@
 [*] [b]BepInEx 5[/b] (the Nuclear Option Mod Manager installs it for you).
 [*] [b]NOCustomMaps 1.4.2 or newer[/b] (BatongMaster's custom map loader; the 1.4.0 build stopped working with the 2026-10-30 game update, so get 1.4.2).
 [*] [b]The Cascadia map, build cm.cascadia.d7766d89[/b]: in the Nuclear Option Mod Manager search for "Cascadia Falling" and install it (it pulls NOCustomMaps in). Without the manager, download cascadia-0.1.1.zip from [url=https://github.com/netmaster296/CascadiaFalling/releases]github.com/netmaster296/CascadiaFalling/releases[/url] and put cascadia-0.1.1.nomapz into BepInEx\plugins\NOCustomMaps\maps\ in your game folder. About 1.6 GB.
-[*] [b]Optional: NOGridLetters[/b] (grid rows past Z read A*, B*... and zoomed-in columns read 12-3; without it the game shows punctuation and lower-case letters). In the mod manager, or the DLL from [url=https://github.com/netmaster296/NOGridLetters/releases]github.com/netmaster296/NOGridLetters/releases[/url] into BepInEx\plugins\.
 [*] [b]Multiplayer:[/b] the host and every player need the same map build. If a map update changes the build key, this page says so and everyone updates the map together.
 [/list]
 
+[b]Hosts using Wing Command:[/b] set AiSharpTurns = false in BepInEx\config\com.marci.wingcommand.cfg before you host. With it on, most AI take-offs end in a crash (in our tests 58 of 183 AI take-offs crashed within a minute with it on, 0 of 67 with it off).
+
+[h1]Optional and recommended mods[/h1]
+[list]
+[*] [b]NOAIFlightFix[/b] (recommended, host only): keeps the AI's climb-outs after take-off and its dives toward low targets in check. [url=https://github.com/netmaster296/NOAIFlightFix/releases]github.com/netmaster296/NOAIFlightFix/releases[/url]
+[*] [b]NOLakeIndex[/b] (recommended, everyone): a fast lake and river lookup for NOCustomMaps, for a better frame rate on this map. [url=https://github.com/netmaster296/NOLakeIndex/releases]github.com/netmaster296/NOLakeIndex/releases[/url]
+[*] [b]NOAirbaseLightsFix[/b] (optional): keeps the donor airbase's runway lights off on custom maps. [url=https://github.com/netmaster296/NOAirbaseLightsFix/releases]github.com/netmaster296/NOAirbaseLightsFix/releases[/url]
+[*] [b]NOCloudDeck[/b] (optional, visual and local only): a Pacific Northwest rain day, with a cloud deck, rain and haze. [b]PvP warning:[/b] players running it see much less far than players without it (in this weather about 5-12 km under the cloud and 0.5 km inside it, against about 50 km in stock), so agree on it before a PvP match. [url=https://github.com/netmaster296/NOCloudDeck/releases]github.com/netmaster296/NOCloudDeck/releases[/url]
+[*] [b]NOGridLetters[/b] (optional): grid rows past Z read A*, B*... and zoomed-in columns read 12-3; without it the game shows punctuation and lower-case letters. [url=https://github.com/netmaster296/NOGridLetters/releases]github.com/netmaster296/NOGridLetters/releases[/url]
+[/list]
+Each is a DLL for BepInEx\plugins\, or install them with the Nuclear Option Mod Manager where they are listed.
+
+[h1]Update 0.1.2 (mission only; the map build stays cm.cascadia.d7766d89)[/h1]
+[list]
+[*] The BDF Annex kept at the Port of Tacoma now lies bow into the wind. It was moored with the wind behind its deck, so its COIN and EW1 left the bow too slow and several fell into the bay. BDF's COIN and EW1 should now launch from JBLM first.
+[*] PALA escorts no longer wait in the path of their own carriers and destroyers (a Hyperion ran down its own patrol boat), and BDF ships no longer stack up on one picket station.
+[*] BDF's rally points at the Port of Tacoma moved from the waterfront to dry ground in the city, so transport helicopters there no longer hunt for a landing spot over Commencement Bay.
+[*] The Hood Canal picket starts north of the Hood Canal Bridge (a corvette sailing under it hit the deck and sank).
+[*] One CFB Comox shelter whose fighters often failed to get airborne (6 of 28 in our playtests) is gone.
+[*] Column vehicles that started partly buried on a mountain road (a PALA tank never moved) now start on the ground.
+[*] The Tacoma Narrows vehicle depot is gone: its SAM vehicles always jammed at the one road junction off the Narrows plateau. BDF's other depots still supply vehicles.
+[*] Host notes in the mission description and the in-game briefing, with a PvP warning about NOCloudDeck.
+[/list]
+
 [h1]Cascadia Falling[/h1]
-PALA attacks Puget Sound from the Pacific and the Strait of Georgia; BDF defends from Tacoma. PvP: both sides can be joined.
+PALA attacks Puget Sound from the Pacific and the straits of Juan de Fuca and Georgia; BDF defends from Tacoma. A 7.5-hour war (T+ is real minutes; the clock runs at 10x), and the first fleets arrive after about two hours. PvP: both sides can be joined.
 
 A 400 km map of the Pacific Northwest, Vancouver to Yakima, built from real elevation, land cover and OpenStreetMap data: sixteen airfields laid out as they really are (runways, taxiways and stands at their real coordinates), seventeen FOBs, seven helipads, three naval bases, eight mountain radar sites and four nuclear silo fields.
 
-[b]BDF[/b] starts with nearly everything, two Hyperion carriers at three naval bases and pickets across the Sound.
+[b]BDF[/b] starts with nearly everything: four Annex assault carriers and five Argus frigates at its naval bases, Shard corvettes and patrol boats on picket across the Sound, twelve fighters taking off from its own fields at the start, and three relief waves entering from the map border.
 
-[b]PALA[/b] holds CFB Comox and has two carrier groups at sea from T+0, each a Hyperion with two Dynamos, patrol boats and landing craft: one entering the Strait of Juan de Fuca from the Pacific (grid P8), one at the top of the Strait of Georgia (grid E12) coming south through Rosario Strait. They meet off Port Townsend, then push through Admiralty Inlet and down the Sound in line astern, the western force to Commencement Bay off Tacoma and the northern to Elliott Bay off Seattle. Reinforcement groups enter on each axis every ten minutes until T+120, and the carriers launch AI aircraft all mission. Then come high-altitude Alkyon anti-ship strikes and Darkreach packages, landing craft at Port Angeles and Birch Bay, the I-5 and mountain columns, Tarantula lifts dropping AA onto the pads with Brawler and Revoker cover, and from T+95 nuclear strike packages on the silo fields. Everything PALA captures builds for PALA.
+[b]PALA[/b] holds CFB Comox, and its fleets start far out at sea. The western carrier group reaches Port Townsend about T+138 and Commencement Bay about T+297, the northern one Elliott Bay about T+353, and the I-5 column reaches the JBLM gate about T+288. A carrier group is a Hyperion, a Dynamo destroyer and three Shard corvettes; a surface group a Dynamo and two Shards; each brings patrol boats and landing craft. Until the fleets arrive the war is air raids, radar strikes, heli-lifts and landings. Every aircraft takes off from a field or carrier its side owns; only PALA strike packages, heli-lifts and BDF relief enter at the map border, low and with full tanks. About 35 AI aircraft fly at once. Everything PALA captures builds for PALA.
 
 [b]As the war unfolds the mission broadcasts intelligence reports[/b] - long-range radar plots, picket contact reports, coast watch and ground liaison - naming what each side's sensors are picking up and where it is headed.
 
-[b]Objectives:[/b] PALA wins by taking JBLM, Fort Lewis FOB, the Port of Tacoma and the Narrows; every other BDF airfield, FOB, pad and naval base is a PALA objective on the way, and each silo field is one to put out of action. BDF wins by sinking all five PALA Hyperions and then destroying the PALA Strategic HQ, which comes ashore once the carriers go down; or by holding the four key sites until relief at T+450. Strategic release comes at T+90 and arms the silo launchers.
+[b]Objectives:[/b] PALA wins by taking JBLM, Fort Lewis FOB, the Port of Tacoma and the Narrows; every other BDF airfield, FOB, pad and naval base is a PALA objective on the way, and each silo field is one to put out of action. BDF wins by sinking all five PALA Hyperions and then destroying the PALA Strategic HQ, which appears on Texada Island once the last carrier goes down; or by holding the four key sites until T+450, which ends the war. Nuclear weapons are cleared at an escalation score of 900 and strategic launchers at 3000; each side keeps a warhead reserve the AI never uses.
 
 [b]Grid callouts:[/b] 10 km cells, A0 at the north-west corner. With NOGridLetters a callout is row + minor row + column, e.g. "D*f12-3".
 
